@@ -1,29 +1,31 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Texts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @texts.each do |text| %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  
+  <h1>Listing Texts</h1>
+  
+  <table>
+    <thead>
       <tr>
-        <td><%= text.title %></td>
-        <td><%= text.content %></td>
-        <td><%= link_to 'Show', text %></td>
-        <td><%= link_to 'Edit', edit_text_path(text) %></td>
-        <td><%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th>Content</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Text', new_text_path %>
+    </thead>
+  
+    <tbody>
+      <% @texts.each do |text| %>
+        <tr>
+          <td><%= text.title %></td>
+          <td><%= text.content %></td>
+          <td><%= link_to 'Show', text %></td>
+          <td><%= link_to 'Edit', edit_text_path(text) %></td>
+          <td><%= link_to 'Destroy', text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+  
+  <%= link_to 'New Text', new_text_path %>
+</div>

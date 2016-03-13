@@ -1,5 +1,5 @@
 class TextsController < ApplicationController
-  before_action :set_text, only: [:show, :edit, :update, :destroy]
+  before_action :set_text, except: [:index, :new, :create]
 
   # GET /texts
   # GET /texts.json
@@ -14,11 +14,20 @@ class TextsController < ApplicationController
 
   # GET /texts/new
   def new
-    @text = Text.new
+    @texts = Text.new
   end
 
   # GET /texts/1/edit
   def edit
+  end
+
+  # GET /texts/1/new_relation
+  def new_relation
+    @texts = Text.all
+  end
+
+  # POST /texts/1
+  def create_relation
   end
 
   # POST /texts
