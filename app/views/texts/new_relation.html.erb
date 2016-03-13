@@ -1,15 +1,16 @@
-
-  <div class="col s6">
-    <%= render @text %>
-  </div>
-  <div class="col s6">
-    <div class="container">
-      <% @texts.each do |text| %>
-        <div class="divider"></div>
-        <div class="section">
-          <h4><%= text.title %></h4>
-          <p><%= text.content %></p>
-        </div>
-      <% end %>
+<div class="container">
+    <div class="col s6">
+      <%= render @text %>
     </div>
-  </div>
+    <div class="col s6">
+      <div class="container">
+        <% @texts.each do |text| %>
+          <div class="divider"></div>
+          <div class="section">
+            <h4><%= text.title %></h4>
+            <p><%= text.content %></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
